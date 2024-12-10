@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="src/assets/favicon/Favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="src/styles/reset.css" />
+    <link rel="stylesheet" href="src/styles/main.css" />
+    <link rel="stylesheet" href="src/styles/buttons.css" />
+    <link rel="stylesheet" href="src/styles/containers_and_frames.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <title>Yu-Gi-Oh_Jo-ken-po</title>
+  </head>
+  <body>
+
+    <audio id="bgm" loop>
+      <source src="src/assets/audios/egyptian_duel.mp3" type="audio/mp3">
+    </audio>
+    
+    <div class="fundo__video">
+        <video class="video" autoplay loop muted" >
+            <source src="src/assets/video/yugi.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="conteiner">
+
+        <div class="conteiner__esquerdo framed-golden-2">
+
+            <div class="caixa_ponto frame">
+                <span id="pontos">Win : 0   Lose : 0</span>
+            </div>
+            <div class="menu_avatar">
+                <img id="card_image">
+            </div>
+            <div class="card_detalhes frame">
+                <p id="card_nome">Selecione uma carta</p>
+                <p id="card_tipo"></p>
+            </div>
+
+        </div>
+
+        <div class="conteiner__direito">
+
+          <div class="card_caixa__conteiner">
+            <div class="card_caixa framed" id="card_AI"></div>
+
+            <div class="card_versus">
+
+              <div class="versus_cima">
+
+                <div class="card_infield">
+
+                  <img id="player_field" height="180px" width="125px">
+
+                </div>
+
+                <img height="100px" src="src/assets/icons/millenium2.png">
+
+                <div class="card_infield">
+
+                  <img id="AI_field" height="180px" width="125px">
+
+                </div>
+
+              </div>
+
+              <div class="versus_baixo">
+                <button id="next-duelo" class="rpgui-button" onclick="resetDuelo()">GANHOU</button>
+              </div>
+            </div>
+
+            <div class="card_caixa framed" id="card_player"></div>
+          </div>
+        </div>
+
+    </div>
+
+    <script src="src/scripts/engine.js" defer></script>
+  </body>
+</html>
